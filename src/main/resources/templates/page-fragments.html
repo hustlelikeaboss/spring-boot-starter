@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"  xmlns="http://www.w3.org/1999/xhtml">
+<head th:fragment="head">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+
+    <title>Spring Boot Bolierplate</title>
+
+</head>
+
+    <body>
+        <div class="wrapper">
+
+            <nav th:fragment="pre-login-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Spring Boot Quickstart</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#preLoginNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="preLoginNav">
+                    <ul class="navbar-nav ml-md-auto">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/registration}"><i class="fa fa-user fa-fw"></i>Register</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/login}"><i class="fa fa-unlock-alt fa-fw"></i>Login</a></li>
+                    </ul>
+                </div>
+            </nav><!-- end top nav-->
+
+            <nav th:fragment="admin-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Spring Boot Quickstart</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#adminNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="adminNav">
+                    <ul class="navbar-nav ml-md-auto">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/admin}"><i class="fa fa-cog fa-fw"></i>Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" th:href="@{/logout}"><i class="fa fa-lock fa-fw"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </nav><!-- end top nav-->
+
+            <!-- main content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <p>Hello World!</p>
+                    </div> <!--/ end row-->
+                </div><!--/ end container-fluid-->
+            </div><!--/ end content-->
+
+
+            <!-- footer -->
+            <footer th:fragment="footer" class="footer">
+                <div class="container-fluid">
+                    <div class="copyright pull-right">
+                        &copy; <script>document.write(new Date().getFullYear())</script><a href="http://www.hustlelikeaboss.design" target="_blank"> Hustle Like A Boss Design</a>
+                    </div>
+                </div>
+            </footer>
+
+            <!--scripts -->
+            <div th:fragment="scripts">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            </div>
+
+        </div><!-- end wrapper -->
+    </body>
+</html>

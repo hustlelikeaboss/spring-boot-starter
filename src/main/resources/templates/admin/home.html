@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="page-fragments :: head"></head>
+
+<body>
+<div class="wrapper">
+
+	<nav th:replace="page-fragments :: admin-nav"></nav>
+
+	<!-- main content -->
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+
+				<div class="container">
+
+                    <h2>Hello <span th:text="${userName}">there</span>!</h2>
+					<p>You can see this because you're an admin.</p>
+
+				</div>
+
+			</div> <!--/ end row-->
+		</div><!--/ end container-fluid-->
+	</div><!--/ end content-->
+
+	<footer th:replace="page-fragments :: footer"></footer>
+	<div th:replace="page-fragments :: scripts"></div>
+
+</div><!-- end wrapper -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="page-fragments :: head"></head>
+
+<body>
+    <div class="wrapper">
+
+        <nav th:replace="page-fragments :: pre-login-nav"></nav>
+
+        <!-- main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="container">
+
+                        <form th:action="@{/login}" method="POST" class="full-screen-form">
+                            <h3 th:text="Welcome"></h3>
+                            <br />
+
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" id="email" name="email"  th:placeholder="Email" class="form-control" /> <br/>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-sm-2 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password"  th:placeholder="Password" id="password" name="password" class="form-control" /> <br />
+                                </div>
+                            </div>
+
+                            <div class="row" th:if="${param.error}">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <p class="text-danger">Email or Password invalid, please verify.</p>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-lg btn-primary" name="Submit" value="Login" type="Submit" th:text="Login"></button>
+
+                        </form>
+
+                    </div>
+
+                </div> <!--/ end row-->
+            </div><!--/ end container-fluid-->
+        </div><!--/ end content-->
+
+        <footer th:replace="page-fragments :: footer"></footer>
+        <div th:replace="page-fragments :: scripts"></div>
+
+    </div><!-- end wrapper -->
+</body>
+</html>

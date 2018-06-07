@@ -1,0 +1,47 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile 'org.springframework.security:spring-security-web:4.2.3.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-security")
+    
+	compile ("io.github.jpenren:thymeleaf-spring-data-dialect:3.1.1")
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('mysql:mysql-connector-java')
+	    
+    // for using Thymeleaf in LEGACYHTML5 mode 
+    compile group: 'net.sourceforge.nekohtml', name: 'nekohtml', version: '1.9.22'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
+
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.springframework.security:spring-security-test")
+    
+	runtime('org.springframework.boot:spring-boot-devtools')
+}
+
+bootRun {
+	addResources = true
+}

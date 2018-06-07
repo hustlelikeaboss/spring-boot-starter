@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="page-fragments :: head"></head>
+
+<body>
+<div class="wrapper">
+
+    <nav th:replace="page-fragments :: pre-login-nav"></nav>
+
+    <!-- main content -->
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="container">
+
+                    <h1>Oops, something went wrong! </h1>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th scope="row">Date</th>
+                                <td th:text="${timestamp}"/>
+                            </tr>
+                            <tr>
+                                <th>Path</th>
+                                <td th:text="${path}"/>
+                            </tr>
+                            <tr>
+                                <th>Error</th>
+                                <td th:text="${error}"/>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td th:text="${status}"/>
+                            </tr>
+                            <tr>
+                                <th>Message</th>
+                                <td th:text="${message}"/>
+                            </tr>
+                            <tr>
+                                <th>Exception</th>
+                                <td th:text="${exception}"/>
+                            </tr>
+                            <tr>
+                                <th>Trace</th>
+                                <td><pre th:text="${trace}"/></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <br/>
+                    <a href="/">Back to Home</a>
+
+                </div>
+
+            </div> <!--/ end row-->
+        </div><!--/ end container-fluid-->
+    </div><!--/ end content-->
+
+    <footer th:replace="page-fragments :: footer"></footer>
+    <div th:replace="page-fragments :: scripts"></div>
+
+</div><!-- end wrapper -->
+</body>
+</html>
