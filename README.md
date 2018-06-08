@@ -1,5 +1,5 @@
 # spring-boot-boilerplate
-Quickstart your Spring Boot project with this opnionated boilerpate. It includes a custom implementation of Spring Security.
+Quickstart your Spring Boot project with this opinionated boilerpate. It includes a custom implementation of Spring Security.
 
 ## Features
 1. Role-based access control using jdbcAuthentication and MySQL;
